@@ -1,0 +1,222 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    background-image: url("../img/6879716.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    margin: auto auto;
+    padding: 20px 30px;
+    height: 100vh;
+}
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+.container .glass {
+    border: 2px solid rgb(236 236 236 / 27%);
+    background-color: rgb(255 255 255 / 20%);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    position: relative;
+    margin: auto auto;
+    top: 50px;
+    height: fit-content;
+    padding: 0 20px 30px 20px;
+}
+.glass .nav {
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+.nav .logo {
+    display: inline-block;
+    font-size: 22px;
+    color: #a1a1a1;
+    font-weight: 500;
+    padding: 10px 10px;
+}
+.nav .nav-btn {
+    display: none;
+}
+.nav .nav-links {
+    display: inline;
+    font-size: 18px;
+    font-weight: 500;
+    float: right;
+    padding: 6px 0;
+}
+.nav .nav-links a {
+    display: inline-block;
+    color: #a1a1a1;
+    padding: 13px 11px;
+}
+.nav .nav-links a:not(:last-child):after {
+    content: "";
+    border-right: 2px solid #ffffff63;
+    position: relative;
+    margin: auto auto;
+    padding: 0 3px 0 0;
+    left: 17%;
+}
+.nav #nav-check {
+    display: none;
+}
+@media (max-width: 992px) {
+    .nav .nav-links {
+        font-size: 14px;
+    }
+}
+@media (max-width:767px) {
+    .nav .nav-btn {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .nav-btn label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav-btn label span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2.3px solid #ffffff63;
+    }
+    .nav .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: rgb(255 255 255 / 12%);
+        height: 0px;
+        transition: all 0.3s ease;
+        overflow-y: hidden;
+        top: 50px;
+        right: 0;
+        padding: 0;
+        z-index: 10;
+        border-radius: 5px;
+    }
+    .nav .nav-links a {
+        display: block;
+        width: 100%;
+    }
+    .nav #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav #nav-check:checked ~ .nav-links {
+        height: fit-content;
+        overflow-y: auto;
+    }
+    .nav .nav-links a:not(:last-child):after {
+        display: none;
+    }
+}
+.landing {
+    position: relative;
+    padding: 10px 10px;
+}
+.landing .box {
+    position: relative;
+    direction: rtl;
+    width: fit-content;
+    margin: auto 0 auto auto;
+    color: #a1a1a1;
+    padding-top: calc(100vh - 500px);
+}
+.landing .box h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+.landing .box h1 {
+    font-size: 45px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.landing .box p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 10px 0;
+    width: 400px;
+}
+.landing .box a {
+    color: #a1a1a1;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    padding: 7px 13px;
+    width: fit-content;
+    text-align: center;
+    border: 1px solid #a1a1a1;
+    border-radius: 9px;
+}
+.landing .box a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+}
+@media (max-width: 992px) {
+    .landing .box h5 {
+        font-size: 16px;
+    }
+    .landing .box h1 {
+        font-size: 42px;
+    }
+    .landing .box p {
+        font-size: 13px;
+        width: 281px;
+    }
+    .landing .box a {
+        font-size: 13px;
+    }
+}
+@media (max-width: 425px) {
+    .container .glass {
+        padding: 0 8px 30px 8px;
+    }
+    .landing .box {
+        direction: ltr;
+    }
+    .landing .box h5 {
+        font-size: 13px;
+        padding: 5px 0;
+    }
+    .landing .box h1 {
+        font-size: 26px;
+    }
+    .landing .box p {
+        font-size: 12px;
+        width: auto;
+    }
+    .landing .box a {
+        font-size: 12px;
+        margin: auto;
+    }
+}
